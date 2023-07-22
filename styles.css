@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
+
+:root {
+  --background-color: #fff;
+  --link-color: #f86;
+  --text-color: #1119;
+  --title-color: #111;
+}
+
+/* cascade */
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background: var(--background-color);
+  color: var(--text-color);
+  font: 100%/1.5 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  text-rendering: geometricPrecision;
+}
+
+h1 {
+  color: var(--title-color);
+  font-size: 6rem;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: var(--title-color);
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin: 3rem 0 1rem;
+}
+
+blockquote {
+  border-left: 3px solid var(--title-color);
+  display: block;
+  margin: unset;
+  padding: 0 2rem;
+}
+
+li {
+  margin: 0 0 1rem;
+}
+li strong {
+  color: var(--title-color);
+}
+
+p {
+  margin: unset;
+}
+
+/* https://www.dannyguo.com/blog/animated-multiline-link-underlines-with-css/ */
+a {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  color: var(--link-color);
+  text-decoration: none;
+  transition: background-size 0.5s cubic-bezier(0.1, 1, 0.3, 1);
+}
+a:focus,
+a:hover {
+  background-size: 100% 2px;
+}
+
+.External::after {
+  content: '↗';
+  margin-left: 0.2em;
+  vertical-align: middle;
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+i {
+  text-align: center;
+  width: 1.2em;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+/* layout */
+
+body {
+  padding: 2rem;
+}
+
+.Center {
+  margin: 0 auto;
+  max-width: 800px;
+}
